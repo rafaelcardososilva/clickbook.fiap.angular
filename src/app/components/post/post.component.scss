@@ -1,0 +1,56 @@
+.container {
+  border: solid 1px #c4c4c4;
+}
+
+.header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  gap: 8px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .box {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.post {
+  width: 100%;
+  height: 100%;
+}
+
+.likes {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  p {
+    margin: 0 0 0 8px;
+    color: #FF0000;
+  }
+}
+
+.description {
+  padding: 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}

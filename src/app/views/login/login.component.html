@@ -1,0 +1,17 @@
+<h1>ClickBook</h1>
+
+<form>
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>E-mail</mat-label>
+    <input matInput placeholder="E-mail" value="" />
+  </mat-form-field>
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Senha</mat-label>
+    <input matInput placeholder="Senha" value="" type="password" />
+  </mat-form-field>
+  <button mat-raised-button color="primary">Fazer Login</button>
+  <div class="to-register">
+    <span>Não tem uma conta?</span>
+    <a [routerLink]="['/cadastro']">Cadastre-se</a>
+  </div>
+</form>

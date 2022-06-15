@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 100%;
+
+  .field {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .to-register {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  a {
+    margin-left: 8px;
+    text-decoration: underline;
+  }
+}
