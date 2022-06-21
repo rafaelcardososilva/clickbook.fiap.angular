@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "categoria": "comida",
+    "fotoURL": "https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_413580649.jpg?w=1200",
+    "numLikes": 10,
+    "timestamp": "2022-06-02",
+    "texto": "lorem ipsum"
+  },
+  {
+    "id": 2,
+    "categoria": "comida",
+    "fotoURL": "https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_413580649.jpg?w=1200",
+    "numLikes": 100,
+    "timestamp": "2022-06-02",
+    "texto": "lorem ipsum la la la la"
+  }
+]

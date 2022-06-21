@@ -1,21 +1,33 @@
 <h1>Cadastro</h1>
 
-<form>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <mat-form-field class="field" appearance="fill">
     <mat-label>Nome</mat-label>
-    <input matInput placeholder="Nome" value="" />
+    <input matInput placeholder="Nome" value="" formControlName="name" />
   </mat-form-field>
   <mat-form-field class="field" appearance="fill">
     <mat-label>E-mail</mat-label>
-    <input matInput placeholder="E-mail" value="" />
+    <input matInput placeholder="E-mail" value="" formControlName="email" />
   </mat-form-field>
   <mat-form-field class="field" appearance="fill">
     <mat-label>Senha</mat-label>
-    <input matInput placeholder="Senha" value="" type="password" />
+    <input
+      matInput
+      value=""
+      placeholder="Senha"
+      type="password"
+      formControlName="password"
+    />
   </mat-form-field>
   <mat-form-field class="field" appearance="fill">
     <mat-label>Repita a senha</mat-label>
-    <input matInput placeholder="Repita a senha" value="" type="password" />
+    <input
+      matInput
+      value=""
+      type="password"
+      placeholder="Repita a senha"
+      formControlName="passwordAgain"
+    />
   </mat-form-field>
-  <button mat-raised-button color="primary">Cadastrar</button>
+  <button mat-raised-button color="primary" type="submit">Cadastrar</button>
 </form>
