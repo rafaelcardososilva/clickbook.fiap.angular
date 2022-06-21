@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/services/register/register.service';
 
 @Component({
@@ -17,9 +18,10 @@ export class RegisterComponent implements OnInit {
   });
 
   constructor(
-    private formBuilder: FormBuilder,
+    private router: Router,
     private _snackBar: MatSnackBar,
-    private registerService: RegisterService,
+    private formBuilder: FormBuilder,
+    private registerService: RegisterService
   ) {}
 
   ngOnInit(): void {}
@@ -31,15 +33,19 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     if (this.validateForm()) {
-      this.registerForm.value;
-      const response = this.registerService.createRegister({
-        name: this.registerForm.value.name!,
-        email: this.registerForm.value.email!,
-        password: this.registerForm.value.password!
+      const { name, email, password } = this.registerForm.value;
+      this.registerService.createRegister({
+        name: name!,
+        email: email!,
+        password: password!,
       });
 
-      console.log('response', response);
-
+      this._snackBar.open('Cadastro realizado com sucesso', '', {
+        duration: 2000,
+      });
+      setTimeout(() => {
+        this.router.navigate(['/login']);
+      }, 2000);
     } else {
       this._snackBar.open(
         'Falha ao registrar o cadastro, tente novamente.',
